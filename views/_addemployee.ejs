@@ -1,0 +1,132 @@
+<div class="add_employee_section " id="addEmployeeForm">
+    <!-- <div class="col-lg-6 section"> -->
+        <div class="col-md-12 page_style">
+            <div class="top">
+                <h3 class="heading">Basic Details</h3>
+                <div class="close_btn">
+                    <button  onclick="closefunction()" id="addCloseBtn" class="head_close_btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="body">
+                <div class="col-md-12 dot space" id="imguploadsection">
+                    
+                    <div id="toHidden">
+                        <label for="uploadimg">
+                           <i class="fa-solid fa-upload color_icon"></i>
+                           <h6><strong>Upload Image</strong></h6>
+                            <input id="uploadimg" type="file" accept="image/*" name="avatar"  hidden>
+                            <h6 class="color_cls">PNG, JPG files are allowed</h6>
+                        </label>
+                        <span id="imagevalidation" class="addValidation"></span>
+                    </div>
+                    <img id="previewImg" src="" alt="your image" />
+                
+                    
+
+                </div>
+                <form class="row">
+                    <div class="col-md-3 colum">
+                        <label for="addSalutation" class="form-label heading_color space">Salutation</label>
+                        <select id="addSalutation" class="form-select">
+                            <option selected class="on_color">select</option>
+                            <option>Mr</option>
+                            <option>Ms</option>
+                        </select>
+                        <span id="addSalutationValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-5 colum">
+                        <label for="addFirstName" class="form-label heading_color space">First Name</label>
+                        <input id="addFirstName" type="text" class="form-control on_color" placeholder="john">
+                        <span id="addFirstNameValidation" class="addValidation" ></span>
+                    </div>
+                    <div class="col-md-4 colum">
+                        <label for="addLastName" class="form-label heading_color space">Last Name</label>
+                        <input id="addLastName" type="text" class="form-control on_color" placeholder="doe">
+                        <span id="addLastNameValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addUserName" class="form-label heading_color space">UserName</label>
+                        <input id="addUserName" type="text" class="form-control on_color " placeholder="username">
+                        <span id="addUserNameValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addPassword" class="form-label heading_color space">Password</label>
+                        <input id="addPassword" type="text" class="form-control on_color" placeholder="enter the password">
+                        <span id="addPasswordValidation"  class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addEmail" class="form-label heading_color space">Email Address</label>
+                        <input id="addEmail" type="text" class="form-control on_color " placeholder="mail@simmple.com">
+                        <span id="addEmailValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addPhone" class="form-label heading_color space">Mobile Number</label>
+                        <input id="addPhone" type="text" class="form-control on_color" placeholder="enter mobile number">
+                        <span id="addPhoneValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addDOB" class="form-label heading_color space">Date of birth</label>
+                        <input id="addDOB" type="date" class="form-control on_color" placeholder="select date of birth">
+                        <span id="addDOBValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="label" class="form-label heading_color space">Gender</label>
+                        <div class="identity">
+                            <div>
+                                <input type="radio" name="addgender" id="male" value="Male" >
+                                <label for="male">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="addgender" id="female" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <span id="addGenderValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-12 colum">
+                        <label for="addQualification" class="form-label heading_color space">Qualification</label>
+                        <input id="addQualification" type="text" class="form-control on_color" placeholder="enter qualification">
+                        <span id="addQualificationValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-12 colum">
+                        <label for="addAddress" class="form-label heading_color space">Address</label>
+                        <input id="addAddress" type="text" class="form-control on_color" placeholder="enter address">
+                        <span id="addAddressValidation" class="addValidation"></span><br/>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addCountry" class="form-label heading_color space">Country</label>
+                        <select id="addCountry" class="form-select">
+                            <option selected class="on_color">select</option>
+                            <option>INDIA</option>
+                            <option>CANADA</option>
+                        </select>
+                        <span id="addCountryValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addState" class="form-label heading_color space">State</label>
+                        <select id="addState" class="form-select">
+                            <option selected class="on_color">select</option>
+                            <option>KERALA</option>
+                            <option>TAMILNADU</option>
+                        </select>
+                        <span id="addStateValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addCity" class="form-label heading_color space">City</label>
+                        <input id="addCity" type="text" class="form-control on_color" placeholder="enter city">
+                        <span id="addCityValidation" class="addValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="addPin" class="form-label heading_color space">Pin/Zip</label>
+                        <input id="addPin" type="text" class="form-control on_color" placeholder="enter pin/zip">
+                        <span id="addPinValidation" class="addValidation"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="submit_btn">
+                <button class="sub_btn cancel" onclick="closefunction()">cancel</button>
+                <button id="addEmployeeSubmit" class="sub_btn add"> Add Employee</button>
+            </div>
+        </div>
+    
+</div>

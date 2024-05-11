@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/otpdetails.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      rel="stylesheet" />
+    <title>OTP verification</title>
+</head>
+<body>
+    <div class="container">
+        <div class="otp_verification-form">
+            <form action="api/users/otpVerification" method="post">
+                <div class="verification_content">
+                    <h1>OTP Verification</h1>
+                    <p>Enter the OTP sent to your email:</p>
+                    <div class="form_content">
+                        <label for="otp">OTP:</label>
+                        <input class="otp_content" type="text" name="otp" id="otp" required>
+                        <button class="top_btn" type="submit">Verify OTP</button>
+                    </div>
+                    <% if (locals.otpMismatch) { %>
+                    <div class="error_message">
+                        <%= locals.otpMismatch %>
+
+                    </div>
+                    <% } else if (locals.error) { %>
+                    <div class="error_message">
+                        <%= error %>
+                    </div>
+                    <% } %>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <% if (locals.otpMismatch || locals.error) { %>
+        <script>
+          setTimeout(() => {
+            document.querySelector('.error_message').style.display = 'none';
+          }, 5000); // Hide_the_message_after_5 seconds
+        </script>
+      <% } %>
+</body>
+</html>

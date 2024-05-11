@@ -1,0 +1,131 @@
+<div id="editEmployeeForm" class="edit_employee_section ">
+    
+    <div class="col-md-12 page_style">
+        <div class="top">
+            <h3 class="heading">Edit Employee</h3>
+            <div class="close_btn">
+                <button onclick="closefunction()" class="head_close_btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="body">
+            <div class="top-section">
+                <div class="col-md-3 dot_img">
+                    <img id="editimageview" src="" alt="">
+                </div>
+                <div class="edit_change">
+                    <label for="edituploadimg">
+                        <span  class="sub_btn change">change</span>
+                        <input type="file" accept="image/*" id="edituploadimg"  hidden>
+                    </label>
+                </div>
+            </div>
+
+            <form class="row">
+
+                <div class="col-md-3 colum">
+                    <label for="editSalutation" class="form-label heading_color space">Salutation</label>
+                    <select id="editSalutation" class="form-select">
+                        <option selected class="on_color">select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                    </select>
+                    <span id="editSalutationValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-5 colum">
+                    <label for="editFirstName" class="form-label heading_color space">First Name</label>
+                    <input id="editFirstName" type="text" class="form-control on_color" placeholder="john">
+                    <span id="editFirstNameValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-4 colum">
+                    <label for="editLastName" class="form-label heading_color space">Last Name</label>
+                    <input id="editLastName" type="text" class="form-control on_color" placeholder="doe">
+                    <span id="editLastNameValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editUserName" class="form-label heading_color space">UserName</label>
+                    <input id="editUserName" type="text" class="form-control on_color " placeholder="username">
+                    <span id="editUserNameValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editPassword" class="form-label heading_color space">Password</label>
+                    <input id="editPassword" type="text" class="form-control on_color" placeholder="enter the password">
+                    <span id="editPasswordValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editEmail" class="form-label heading_color space">Email Address</label>
+                    <input id="editEmail" type="text" class="form-control on_color " placeholder="mail@simmple.com">
+                    <span  id="editEmailValiadation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editMobileNo" class="form-label heading_color space">Mobile Number</label>
+                    <input id="editMobileNo" type="text" class="form-control on_color" placeholder="enter mobile number">
+                    <span id="editMobileNoValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editDOB" class="form-label heading_color space">Date of birth</label>
+                    <input id="editDOB" type="date" class="form-control on_color" placeholder="select date of birth">
+                    <span id="editDOBValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="label" class="form-label heading_color space">Gender</label>
+                    <div class="identity">
+                        <div>
+                            <input type="radio" name="editgender" id="editmale" value="Male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="editgender" id="editfemale" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <span  id="editGenderValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-12 colum">
+                    <label for="editQualification" class="form-label heading_color space">Qualification</label>
+                    <input id="editQualification" type="text" class="form-control on_color" placeholder="enter qualification">
+                    <span id="editQualificationValiadtion" class="editValidation"></span>
+                </div>
+                <div class="col-md-12 colum">
+                    <label for="editAddress" class="form-label heading_color space">Address</label>
+                    <input id="editAddress" type="text" class="form-control on_color" placeholder="enter address">
+                    <span id="editAddressValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editCountry" class="form-label heading_color space">Country</label>
+                    <select id="editCountry" class="form-select">
+                        <option selected class="on_color">select</option>
+                        <option>INDIA</option>
+                        <option>USA</option>
+                    </select>
+                    <span id="editCountryValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editState" class="form-label heading_color space">State</label>
+                    <select id="editState" class="form-select">
+                        <option selected class="on_color">select</option>
+                        <option>KERALA</option>
+                        <option>WA</option>
+                        <option>TX</option>
+                        <option>IL</option>
+                    </select>
+                    <span id="editStateValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editCity" class="form-label heading_color space">City</label>
+                    <input id="editCity" type="text" class="form-control on_color" placeholder="enter city">
+                    <span id="editCityValidation" class="editValidation"></span>
+                </div>
+                <div class="col-md-6 colum">
+                    <label for="editPin" class="form-label heading_color space">Pin/Zip</label>
+                    <input id="editPin" type="text" class="form-control on_color" placeholder="enter pin/zip">
+                    <span id="editPinValidation" class="editValidation"></span>
+                </div>
+            </form>
+        </div>
+        <div class="submit_btn">
+            <button onclick="closefunction()" class="sub_btn cancel">cancel</button>
+            <button id="editEmployeeSubmit" class="sub_btn add">Save changes</button>
+        </div>
+    </div>
+    
+</div>

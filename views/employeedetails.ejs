@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/employeedetails.css">
+    <link rel="stylesheet" href="/public/css/bootcopy.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Poppins:wght@100&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid" id="viewDetailsForm">
+        <div class="row">
+            <div class="col-lg-2 side_section">
+                <div class="header">
+                    <h3 class="emp">Employee</h3>
+                    <h3 class="mag">Management</h3>
+                </div>
+                <div class="body_section">
+                    <ul class="list_iteams">
+                        <li><a href="/"><i class="fa-solid fa-house"></i>Dashbord</a></li>
+                        <li><i class="fa-solid fa-chart-simple"></i>Employees</li>
+                        <li><i class="fa-solid fa-user"></i>My Profile</li>
+                        <li><i class="fa-solid fa-lock"></i>Logout</li>
+                    </ul>
+                </div>
+                <div class="footer_section">
+                    <div class="footer">
+                        <h6 class="text">Powered By</h6>
+                        <img src="/public/image/image 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 back_ground">
+                <div class="main_head">
+                    <div class="title">
+                        <h6>Dashbord/Employees</h6>
+                        <h3 class="employe">Employees</h3>
+                    </div>
+                    <div class="side_bar">
+                        <!-- <div class="input">
+                            <input class="input-search" placeholder="&#xF002;   Search"
+                                style="font-family:Arial, FontAwesome">
+                            <i class="fa-regular fa-bell bell_icon"></i>
+                        </div>
+
+                        <div class="img_icon">
+                            <img src="/public/image/Avatar Style 6.png" alt="">
+                        </div> -->
+
+                    </div>
+                </div>
+                <div class="col-md-7 emply_details">
+                    <div class="backgrd_img">
+                        <img src="/public/image/Background Image.png" class="back_img" alt="">
+                        <div class="back_color">
+                            <img id="viewprofilepic" src="" class="round_img" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-12  add_details">
+                        <p id="fullName" class="info_value extra"></p>
+                        <p id="emailDetails" class="info_heading extra"></p>
+                    </div>
+                    <div class="col-md-12 profile_info">
+                        <div class="col-md-4 profile_data">
+                            <p class="info_heading">Gender</p>
+                            <p id="genderDetails" class="info_value"></p>
+                        </div>
+                        <div class="col-md-4 profile_data">
+                            <p class="info_heading">Age</p>
+                            <p id="ageDetails" class="info_value"></p>
+                        </div>
+                        <div class="col-md-4 profile_data">
+                            <p class="info_heading">Date of Birth</p>
+                            <p id="DOB" class="info_value"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 general_info">
+                        <div class="col-md-6 general_data">
+                            <p class="info_heading">Mobile Number</p>
+                            <p id="phnDetails" class="info_value"></p>
+                        </div>
+                        <div class="col-md-6 general_data">
+                            <p class="info_heading">Qualifications</p>
+                            <p id="qualificationDetails" class="info_value"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 general_info">
+                        <div class="col-md-6 general_data">
+                            <p class="info_heading">Address</p>
+                            <p id="addDetails" class="info_value"></p>
+                        </div>
+                        <div class="col-md-6 general_data">
+                            <p class="info_heading">Username</p>
+                            <p id="userName" class="info_value"></p>
+                        </div>
+                    </div>
+                    <div class="bottom_btn">
+                            <button class="btn_section delete" onclick="deleteemployeepopup()">Delete</button>
+                            <button class="btn_section edit"  onclick="editdetailsformpopup()">Edit details</button>
+                    </div>
+                </div>
+                <hr class="seperate_line">
+                <div class="water_mark">
+                    <div class="watermark_text">
+                        <p class="last_text">© 2023 All Rights.</p> <p class="extra_text">Stackup</p>
+                   </div>
+                   <div class="terms">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+    <div class="delete_section" id="deleteEmployeeForm">
+        <div class="top">
+            <h3 class="heading">Delete Employee</h3>
+            <div class="close_btn">
+                <button id="closeX"  class="head_close_btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="content_section">
+            <div class="sentence">
+                <p class="warning">Are you sure you want to delete this employee?</p>
+            </div>
+            <div class="final_delete_section">
+                <button id="viewdeletecancel" class="final cancel">cancel</button>
+                <button class=" final delete"  id="viewDelete">Yes, Delete</button>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+           <!-- edit -->
+
+    <div id="editEmployeeForm" class="edit_employee_section ">
+    
+        <div class="col-md-12 page_style">
+            <div class="top">
+                <h3 class="heading">Edit Employee</h3>
+                <div class="close_btn">
+                    <button onclick="closefunction()" class="head_close_btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="body">
+                <div class="top-section">
+                    <div class="col-md-3 dot_img">
+                        <img id="editprofilepic" src="" alt="">
+                    </div>
+                    <div class="edit_change">
+                        <label for="viewedituploadimg">
+                            <span class="sub_btn change">change</span>
+                            <input type="file" accept="image/*" id="viewedituploadimg"  hidden>
+                        </label>
+                    </div>
+                </div>
+    
+                <form class="row">
+    
+                    <div class="col-md-3 colum">
+                        <label for="editSalutation" class="form-label heading_color space">Salutation</label>
+                        <select id="editSalutation" class="form-select">
+                            <option selected class="on_color">select</option>
+                            <option>Mr</option>
+                            <option>Ms</option>
+                        </select>
+                        <span id="editSalutationValidation" class="editValidation"></span>
+
+                    </div>
+                    <div class="col-md-5 colum">
+                        <label for="editFirstName" class="form-label heading_color space">First Name</label>
+                        <input id="editFirstName" type="text" class="form-control on_color" placeholder=>
+                        <span id="editFirstNameValidation" class="editValidation"></span>
+                    
+                    </div>
+                    <div class="col-md-4 colum">
+                        <label for="editLastName" class="form-label heading_color space">Last Name</label>
+                        <input id="editLastName" type="text" class="form-control on_color" placeholder=>
+                        <span id="editLastNameValidation" class="editValidation"></span>
+
+                        
+
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editUserName" class="form-label heading_color space">UserName</label>
+                        <input id="editUserName" type="text" class="form-control on_color " placeholder="username">
+                        <span class="editValidation"  id="editUserNameValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editPassword" class="form-label heading_color space">Password</label>
+                        <input id="editPassword" type="text" class="form-control on_color" placeholder="enter the password">
+                        <span class="editValidation" id="editPasswordValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editEmail" class="form-label heading_color space">Email Address</label>
+                        <input id="editEmail" type="text" class="form-control on_color " placeholder=>
+                        <span class="editValidation" id="editEmailValidation"></span>
+                        
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editMobileNo" class="form-label heading_color space">Mobile Number</label>
+                        <input id="editMobileNo" type="text" class="form-control on_color" placeholder="enter mobile number">
+                        <span id="editMobileNoValidation" class="editValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editDOB" class="form-label heading_color space">Date of birth</label>
+                        <input id="editDOB" type="date" class="form-control on_color" placeholder="select date of birth">
+                        <span class="editValidation" id="editDOBValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="label" class="form-label heading_color space">Gender</label>
+                        <div class="identity">
+                            <div>
+                                <input type="radio" name="editgender" id="editmale" value="Male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="editgender" id="editfemale" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <span class="editValidation" id="editGenderValidation"></span>
+                    </div>
+                    <div class="col-md-12 colum">
+                        <label for="editQualification" class="form-label heading_color space">Qualification</label>
+                        <input id="editQualification" type="text" class="form-control on_color"
+                            placeholder="enter qualification">
+                            <span class="editValidation" id="editQualificationValidation"></span>
+                    </div>
+                    <div class="col-md-12 colum">
+                        <label for="editAddress" class="form-label heading_color space">Address</label>
+                        <input id="editAddress" type="text" class="form-control on_color" placeholder="enter address">
+                        <span id="editAddressValidation" class="editValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editCountry" class="form-label heading_color space">Country</label>
+                        <select id="editCountry" class="form-select">
+                            <option selected class="on_color">select</option>
+                            <option>INDIA</option>
+                            <option>USA</option>
+                        </select>
+                        <span id="editCountryValidation" class="editValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editState" class="form-label heading_color space">State</label>
+                        <select id="editState" class="form-select">
+                            <option selected class="on_color">select</option>
+                            <option>KERALA</option>
+                            <option>WA</option>
+                            <option>TX</option>
+                            <option>IL</option>
+                        </select>
+                        <span id="editStateValidation" class="editValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editCity" class="form-label heading_color space">City</label>
+                        <input id="editCity" type="text" class="form-control on_color" placeholder="enter city">
+                        <span class="editValidation" id="editCityValidation"></span>
+                    </div>
+                    <div class="col-md-6 colum">
+                        <label for="editPin" class="form-label heading_color space">Pin/Zip</label>
+                        <input id="editPin" type="text" class="form-control on_color" placeholder="enter pin/zip">
+                        <span  class="editValidation" id="editPinValidation"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="submit_btn">
+                <button onclick="closefunction()" class="sub_btn cancel">cancel</button>
+                <button id="editEmployeeSubmit" class="sub_btn add">Save changes</button>
+            </div>
+        </div>
+        
+   </div>
+    
+    <div onclick="closefunction()" class="overlay" id="overlayDiv"></div>
+
+    <script src="/public/js/employeedetails.js"></script>
+</body>
+</html>
