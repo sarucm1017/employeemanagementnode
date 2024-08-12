@@ -72,7 +72,7 @@ function deleteemployeepopup(id){
     function employee_delete(id) {
 
         console.log("id is",id);
-        fetch(`http://localhost:2001/api/employees/${id}`,{
+        fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`,{
             method:'DELETE',
         })
         .then((respone) =>  respone.json())
