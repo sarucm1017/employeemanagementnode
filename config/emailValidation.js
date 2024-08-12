@@ -37,6 +37,7 @@ const sendOTP = async (email,otp) => {
         console.error(error);
         throw new Error("error sending otp email");
     }
+    
 };
 
 

@@ -304,7 +304,7 @@ function fetchData(){
     const totalPageCount = employeeNumberCount.value;
 
     fetch(
-        `http://localhost:2001/api/employees?page=${currentPage}&size=${totalPageCount}`
+        `https://employeemanagementnode.onrender.com/api/employees?page=${currentPage}&size=${totalPageCount}`
     )
     .then((res) => {
         if(!res.ok) {

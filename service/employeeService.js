@@ -13,31 +13,6 @@ const asyncHandler = require("express-async-handler");
 
 const getAllEmployees = asyncHandler(async (page, size) => {
     try {
-        // const pipeline = [
-        //     {
-        //         $facet: {
-        //             allEmployees: [
-        //                 {
-        //                     $match: {employeeSearch} // You can add any match criteria here if needed
-        //                 },
-        //                 {
-        //                     $sort: { createdAt: -1 }
-        //                 }
-        //             ],
-        //             employees: [
-        //                 {
-        //                     $sort: { createdAt: -1 }
-        //                 },
-        //                 {
-        //                     $skip: (page - 1) * size
-        //                 },
-        //                 {
-        //                     $limit: parseInt(size)
-        //                 }
-        //             ]
-        //         }
-        //     }
-        // ];
         const pipeline = [];
         if (employeeSearch) {
             pipeline.push({
@@ -59,6 +34,8 @@ const getAllEmployees = asyncHandler(async (page, size) => {
                     {
                         $skip: (page - 1) * size
                     },
+
+                    
                     {
                         $limit: (size)
                     }
@@ -92,6 +69,7 @@ async function getEmployeeById(employeeId) {
     return employee;
 
 };
+
 
 async function createEmployee(newEmployee){
     try{
