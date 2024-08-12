@@ -7,7 +7,7 @@ console.log("id is",id);
 
 viewdetails(id);
 function viewdetails(id){
-    fetch(`http://localhost:2001/api/employees/${id}`)
+    fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`)
     .then(res =>{
         return res.json();
     })
@@ -83,7 +83,7 @@ function  deleteemployeepopup(id){
 
 function employee_delete(){
 
-    fetch(`http://localhost:2001/api/employees/${id}`,{
+    fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`,{
         method:'DELETE',
     })
     .then((respone) =>  respone.json())
@@ -135,13 +135,13 @@ function closefunction(){
 // editform view details
 
 async function editformview(id){
-    await fetch(`http://localhost:2001/api/employees/${id}`)
+    await fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`)
     .then((res) => {
         return res.json();
     })
     .then((data) => {
         const editprofilepic = document.getElementById("editprofilepic");
-        editprofilepic.src = `http://localhost:2001/api/employees/${id}`;
+        editprofilepic.src = `https://employeemanagementnode.onrender.com/api/employees/${id}`;
         document.getElementById("editprofilepic").src = `/${data.image}`;
          document.getElementById("editSalutation").value = data.salutation;
          document.getElementById("editFirstName").value = data.firstName;
@@ -253,7 +253,7 @@ function editemployeesubmition(id){
     console.log(formData);
 
 
-     fetch(`http://localhost:2001/api/employees/${id}`,{
+     fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`,{
         method: "PUT",
         body: formData,
          

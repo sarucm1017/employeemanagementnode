@@ -345,7 +345,7 @@ function fetchData(){
 // editform view details
 
 async function editformview(id){
-    await fetch(`http://localhost:2001/api/employees/${id}`)
+    await fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`)
     .then((res) => {
         return res.json();
     })
@@ -482,7 +482,7 @@ function editemployeesubmition(id){
 
     //  let editemployeeData;
 
-     fetch(`http://localhost:2001/api/employees/${id}`,{
+     fetch(`https://employeemanagementnode.onrender.com/api/employees/${id}`,{
         method: "PUT",
         body: formData,
      }) 
@@ -597,7 +597,7 @@ addemployeesubmit.addEventListener("click", (e) =>  {
     formData.append("password",password);
     formData.append("image",image);
 
-    const apiurl = "http://localhost:2001/api/employees" ;
+    const apiurl = "https://employeemanagementnode.onrender.com/api/employees" ;
 
     fetch(apiurl, {
         method : 'POST' ,
@@ -904,7 +904,7 @@ function searchEmployee(){
     let searchingInput = document.getElementById("searchInput").value.toLowerCase();
     if(searchingInput){
      
-      fetch(`http://localhost:2001/api/employees/search/${searchingInput}`)
+      fetch(`https://employeemanagementnode.onrender.com/api/employees/search/${searchingInput}`)
       .then((res) => {
         // if(!res.ok) {
         //     throw new Error("response was not ok");
